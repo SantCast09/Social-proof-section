@@ -1,0 +1,151 @@
+:root {
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(325, 42%, 51%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.container {
+    width: 63%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-areas:
+        "paragraph stars"
+        "paragraph stars"
+        "card card";
+
+    grid-template-rows: repeat(autofill, 1fr);
+
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left 100px, top 100px left 400px;
+
+}
+
+.paragraph {
+    grid-area: paragraph;
+    width: 65%;
+
+}
+
+.paragraph h1 {
+    color: var(--very-dark-magenta);
+    font-size: 55px;
+    margin-top: 0;
+}
+
+.paragraph p {
+    font-size: 17px;
+    color: var(--Dark-Grayish-Magenta);
+    font-weight: 500;
+}
+
+
+
+.stars {
+    grid-area: stars;
+    margin-top: 25px;
+
+}
+
+
+
+.review {
+    background: var(--Light-Grayish-Magenta);
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.review:first-child {
+    position: relative;
+    right: 70px;
+}
+
+
+.review:nth-child(2) {
+    position: relative;
+    right: 50px;
+}
+
+.review img {
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+}
+
+.review p {
+    padding: 0 20px;
+}
+
+
+.cards {
+    grid-area: card;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+
+
+}
+
+.card {
+    background: var(--very-dark-magenta);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card:first-child {
+    position: relative;
+    top: 50px;
+
+}
+
+.card:nth-child(2) {
+    position: relative;
+    top: 70px;
+}
+
+.card:nth-child(3) {
+    position: relative;
+    top: 90px;
+}
+
+.card img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: 18px;
+}
+
+.header {
+    display: flex;
+}
+
+.buyer {
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.buyer p:first-child {
+    margin-bottom: 0;
+}
+
+.buyer :nth-child(2) {
+    margin-top: 5px;
+    color: var(--soft-pink);
+
+}
